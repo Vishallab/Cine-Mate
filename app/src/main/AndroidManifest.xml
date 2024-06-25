@@ -19,7 +19,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".activities.AnimeSplashActivity"
+            android:name=".activities.MainMenuActivity"
             android:exported="true" />
         <activity
             android:name=".activities.NowPlayingActivity"
@@ -28,7 +28,7 @@
             android:name=".activities.MovieDetailActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.MainMenuActivity"
+            android:name=".activities.AnimeSplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
