@@ -18,7 +18,10 @@
             android:name=".activities.similarActivity"
             android:exported="false" />
 
-               <activity
+        <activity
+            android:name=".activities.AnimeSplashActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.NowPlayingActivity"
             android:exported="true" />
         <activity
