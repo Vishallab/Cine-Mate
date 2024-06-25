@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="app_name">Cine Mate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_hit">Hit API</string>
+    <string name="text_null">-</string>
+    <string name="text_overview">Overview</string>
+    <string name="text_releaseDate">Release Date</string>
+    <string name="text_title">Title</string>
+    <string name="text_Orignal_title">Orignal Title</string>
+
+    <string name="text_movieDetail">Movie Detail</string>
+    <string name="text_movieRating">%1$s (%2$s)</string>
+    <string name="text_synopsis">Synopsis</string>
+
+    <!--    <string name="text_movieCaption">%1$s \u2022 %2$sh %3$sm (%4$s)</string>-->
+    <string name="text_movieCaption">%1$s • %2$sh %3$sm (%4$s min)</string>
+
+
+    <!--    <string name="text_movieCaption">%1$s \u2022 %2$sh %3$sm</string>-->
+    <string name="text_movieDescription">%1$s\n\n%2$s</string>
+    <string name="text_nowPlaying">Now Playing</string>
+    <string name="text_similarMovie">Similar Movies</string>
+
+    <string name="text_upcoming">Upcoming</string>
+    <string name="text_home">Home</string>
+    <string name="text_popularity">Popularity</string>
+    <string name="text_productionCompany">Production Company</string>
+    <string name="text_similar">Similar Movies</string>
+    <string name="text_watchTrailer">Watch Trailer</string>
+    <string name="text_videoFailed">Trailer is not available</string>
+    <string name="text_dismiss">Dismiss</string>
+    <string name="text_trendingMovieWeek">Trending Movies Of The Week</string>
+    <string name="text_genreMovie">Movie Genres</string>
+    <string name="text_popularMovie">Popular Movies</string>
+    <string name="text_placeholder">%1$s</string>
+    <string name="text_topRated">Top Rated Movies</string>
+    <string name="text_progressBar">Please Wait</string>
+    <string name="text_noInternet">No internet connection</string>
+
+    <string name="bio">Made with ❤ by Vishal Mishra 😉</string>
+</resources>

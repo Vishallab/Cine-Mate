@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".fragments.MovieDetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                    app:neumorph_lightSource="rightBottom"
+                app:cardCornerRadius="6dp"
+                    app:neumorph_shadowColorLight="#A3A3A3"
+                    app:neumorph_shadowElevation="20dp"
+                    app:neumorph_shapeType="basin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/home_viewPager_images_backdrop_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:background="@color/surface"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp"
+                android:backgroundTint="@color/surface"
+                app:neumorph_lightSource="leftBottom"
+                app:cardCornerRadius="6dp"
+                app:neumorph_shadowColorLight="#9A9A9A"
+                app:neumorph_shadowElevation="90dp"
+                app:neumorph_shapeType="basin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/movieDetail_imageView_poster_fragment"
+                        android:layout_width="170dp"
+                        android:layout_height="230dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/movieDetail_textView_titlePlaceholder_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="@string/text_title"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textColor="@color/onSurface"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+            <TextView
+                android:id="@+id/movieDetail_textView_caption_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/text_null"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/movieDetail_button_watchTrailer_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/text_watchTrailer"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:rotationX="22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_caption_fragment"
+                app:neumorph_backgroundColor="#EC7E7E"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/movieDetail_button_similarMovies_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/text_similar"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:rotationX="22"
+
+                app:neumorph_shadowElevation="6dp"
+                app:neumorph_lightSource="leftBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_button_watchTrailer_fragment"
+                app:neumorph_backgroundColor="#85EC7E"
+
+                app:neumorph_shapeType="flat" />
+
+
+            <TextView
+                android:id="@+id/movieDetail_textView_title_fragment1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#989898"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_button_similarMovies_fragment" />
+
+            <soup.neumorphism.NeumorphTextView
+                android:id="@+id/movieDetail_textView_title_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_title"
+                android:typeface="serif"
+                app:neumorph_shadowColorDark="#C5C2C2"
+                app:neumorph_shadowElevation="1dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_title_fragment1" />
+
+
+            <TextView
+                android:id="@+id/movieDetail_textView_orignal_title_fragment1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Orignal Title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#989898"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_title_fragment" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_orignal_title_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_Orignal_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_orignal_title_fragment1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_orignal_title_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_orignal_title_fragment"
+                app:srcCompat="@drawable/ic_baseline_star_rate_24" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_rating_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/text_null"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/movieDetail_textView_rating_fragment"
+                app:layout_constraintStart_toEndOf="@+id/movieDetail_textView_rating_fragment"
+                app:layout_constraintTop_toTopOf="@+id/movieDetail_textView_rating_fragment" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_baseline_arrow_drop_up_24"
+                app:layout_constraintBottom_toBottomOf="@+id/divider"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_popularity_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/text_null"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_genre_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/text_genreMovie"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_title_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_title_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movieDetail_recyclerView_genre_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_genre_fragment" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_description_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/text_null"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/movieDetail_textView_budgetStatic_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Movie Budget"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_description_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_description_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_description_fragment" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_budget_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/text_null"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_budgetStatic_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_budgetStatic_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_budgetStatic_fragment" />
+
+            <TextView
+                android:id="@+id/movieDetail_textView_revenueStatic_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Movie Revenue"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_title_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_title_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_budget_fragment" />
+
+
+            <!--                the padding os only because the text is not visible becauese of naviagtion bar -->
+
+            <TextView
+                android:id="@+id/movieDetail_textView_revenue_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="40dp"
+                android:text="@string/text_null"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_revenueStatic_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_revenueStatic_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_revenueStatic_fragment" />
+
+
+            <TextView
+                android:id="@+id/movieDetail_textView_productionCompanyStatic_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/text_productionCompany"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_title_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_title_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_recyclerView_genre_fragment" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movieDetail_recyclerView_productionCompany_fragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_productionCompanyStatic_fragment" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/text_synopsis"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/movieDetail_textView_productionCompanyStatic_fragment"
+                app:layout_constraintStart_toStartOf="@+id/movieDetail_textView_productionCompanyStatic_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_recyclerView_productionCompany_fragment" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/bio"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieDetail_textView_revenue_fragment" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
