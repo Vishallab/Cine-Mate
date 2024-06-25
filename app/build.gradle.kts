@@ -54,10 +54,8 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui:2.7.7")
     implementation ("androidx.legacy:legacy-support-v4:1.0.0")
 
-    implementation ("com.facebook.shimmer:shimmer:0.5.0")
 
     implementation ("com.github.fornewid:neumorphism:0.3.0")
-
 
 
 
