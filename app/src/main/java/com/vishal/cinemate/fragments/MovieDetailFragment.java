@@ -52,7 +52,7 @@ public class MovieDetailFragment extends Fragment {
     private ImagesVPAdapter  imagesVPAdapter;
 
     private Handler handler;
-        private View view;
+    private View view;
     private ImageView movieDetail_imageView_backdrop_fragment, movieDetail_imageView_poster_fragment;
     private TextView movieDetail_textView_titlePlaceholder_fragment, movieDetail_textView_caption_fragment, movieDetail_textView_title_fragment, movieDetail_textView_rating_fragment, movieDetail_textView_popularity_fragment, movieDetail_textView_productionCompanyStatic_fragment, movieDetail_textView_description_fragment, movieDetail_textView_budget_fragment,movieDetail_textView_orignal_title_fragment, movieDetail_textView_revenue_fragment;
     private Button movieDetail_button_watchTrailer_fragment,movieDetail_button_similar_fragment;

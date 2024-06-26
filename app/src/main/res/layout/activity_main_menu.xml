@@ -48,8 +48,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:navGraph="@navigation/main_bottom_navigation"
                 />
-            <TextView
 
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -73,6 +73,5 @@
         app:itemIconTint="@drawable/bottom_navigation_state"
         app:itemTextColor="@drawable/bottom_navigation_state"
         app:menu="@menu/main_bottom_navigation_menu" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

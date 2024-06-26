@@ -20,7 +20,6 @@
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         app:title="@string/text_similarMovie" />
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nowPlaying_recyclerView_fragment_similar"
         android:layout_width="0dp"
@@ -34,6 +33,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movieDetail_similar_toolbar" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

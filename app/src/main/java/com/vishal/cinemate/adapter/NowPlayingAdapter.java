@@ -74,7 +74,7 @@ public class NowPlayingAdapter extends RecyclerView.Adapter<NowPlayingAdapter.Ca
             @Override
             public void onClick(View view) {
                 //Activity
-//                Intent intent = new Intent(context, MovieDetailActivity.class);
+//                Intent intent = new Intent(context, MovieDetailActivity.class); //her elike i want to open activty not fragmet
 //                intent.putExtra("movieId", String.valueOf(results.getId()));
 //                context.startActivity(intent);
 

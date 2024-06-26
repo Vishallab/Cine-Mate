@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="splas.json"
+        app:lottie_fileName="cat.json"
         />
     <TextView
 
@@ -27,6 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="30dp"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="@string/bio"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
