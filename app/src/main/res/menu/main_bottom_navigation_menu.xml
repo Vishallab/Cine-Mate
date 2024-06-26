@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/text_home" />
+        android:title="@string/text_home"
+        tools:layout="@layout/fragment_home" />
     <item
         android:id="@+id/nowPlayingFragment"
         android:icon="@drawable/ic_baseline_movie_24"
-        android:title="@string/text_nowPlaying" />
+        android:title="@string/text_nowPlaying"
+        />
     <item
         android:id="@+id/upcomingFragment"
         android:icon="@drawable/ic_baseline_calendar_today_24"

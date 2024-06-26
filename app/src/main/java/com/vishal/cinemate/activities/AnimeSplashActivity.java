@@ -1,16 +1,18 @@
 package com.vishal.cinemate.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.util.Log;
 import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.LottieCompositionFactory;
+import com.airbnb.lottie.LottieListener;
 import com.vishal.cinemate.R;
 
 public class AnimeSplashActivity extends AppCompatActivity {
+    private static final String TAG = "AnimeSplashActivity";
     LottieAnimationView splashview;
 
     @Override
@@ -20,31 +22,29 @@ public class AnimeSplashActivity extends AppCompatActivity {
 
         splashview = findViewById(R.id.splash);
 
+        // Load the Lottie animation and handle errors
 
-        splashview.animate().translationY(-3500).setDuration(2000).setStartDelay(4000).setListener(new Animator.AnimatorListener() {
+
+        splashview.addAnimatorListener(new Animator.AnimatorListener() {
             @Override
-            public void onAnimationStart(@NonNull Animator animation) {
-                //jb animation start ho rhi tb kuch krnah to
+            public void onAnimationStart(Animator animation) {
             }
 
             @Override
-            public void onAnimationEnd(@NonNull Animator animation) {
-                //ba jb animation edn ho jayegi to appnei ko kya krna jaise splash h to apne to intent pass krna h
+            public void onAnimationEnd(Animator animation) {
                 Intent intent = new Intent(AnimeSplashActivity.this, MainMenuActivity.class);
                 startActivity(intent);
 
+                finish();
             }
 
             @Override
-            public void onAnimationCancel(@NonNull Animator animation) {
-
+            public void onAnimationCancel(Animator animation) {
             }
 
             @Override
-            public void onAnimationRepeat(@NonNull Animator animation) {
-
+            public void onAnimationRepeat(Animator animation) {
             }
         });
-
     }
 }

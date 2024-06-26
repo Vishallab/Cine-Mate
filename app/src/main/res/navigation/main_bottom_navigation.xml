@@ -33,6 +33,9 @@
             android:name="movieId"
             android:defaultValue="null"
             app:argType="string" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_similarActivity"
+            app:destination="@id/similarActivity" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -47,5 +50,10 @@
 
 
     </fragment>
+    <activity
+        android:id="@+id/similarActivity"
+        android:name="com.vishal.cinemate.activities.similarActivity"
+        android:label="activity_similar"
+        tools:layout="@layout/activity_similar" />
 
 </navigation>
